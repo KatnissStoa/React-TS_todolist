@@ -42,3 +42,14 @@ interface IProps {
 
 ## useRef、useState写法的特殊之处
 `const inputRef = useRef<HTMLInputElement>(null)`获取input框中输入的值；useRef、useState都需要写`<HTMLInputElement>`泛型
+
+## git到远程仓库的报错
+通常在GitHub上创建仓库并复制HTTP链接后可以通过以下7步上传代码
+1. 新建文件-右键Git Bash Here
+2. git init
+3. 将需要上传的文件复制到该文件中
+4. git add .
+5. git commit -m '注释内容'
+6. git remote add origin 之前复制的仓库HTTP地址
+7. git push origin main
+但会发现在第7步时报错`error: src refspec main does not match any`，原因是main和master不同名，解决方法是先执行`git branch -m master main`将旧名master重命名为新名main，然后再执行`git push origin main`
