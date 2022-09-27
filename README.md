@@ -17,6 +17,8 @@ export interface ITodo {
 ```
 限定三个参数的类型
 
+addition：括号后的冒号接的是冒号前的变量/组件类型，非括号后的冒号接的是该变量参数/函数类型
+
 ## 函数组件的TS常规写法
 ```typescript
 //FC表示function component，IProps表示输入的参数，addTodo和todoList是从interface中接收的参数，从这里传入函数组件进行使用
